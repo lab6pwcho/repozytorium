@@ -1,4 +1,5 @@
 FROM java:8
-RUN apt-get update
-RUN apt-get install -y apache2
-CMD 
+COPY . /
+WORKDIR /
+RUN javac plik.java
+CMD ["java", "-classpath", "mysql-connector-java-8.0.11.jar:.","plik"]
