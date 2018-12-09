@@ -1,5 +1,5 @@
-FROM java:8
+FROM java:latest  
 COPY . /
-WORKDIR /
-RUN javac plik.java
-CMD ["java", "-classpath", "mysql-connector-java-8.0.13-1ubuntu18.10_all.deb:.","plik"]
+WORKDIR /  
+RUN javac javabaza.java
+CMD ["java", "-classpath", "mysql-connector-java-8.0.13.jar:.","javabaza"]
